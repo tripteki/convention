@@ -1,0 +1,11 @@
+#!/bin/sh
+
+mv LICENSE .LICENSE.backup 2> /dev/null
+mv .gitignore .gitignore.backup 2> /dev/null
+mv .editorconfig .editorconfig.backup 2> /dev/null
+mv .styleci.yml .styleci.yml.backup 2> /dev/null
+
+curl -L -o LICENSE https://raw.githubusercontent.com/tripteki/convention/1.0.0/_LICENSE
+curl -L -o .gitignore https://raw.githubusercontent.com/tripteki/convention/1.0.0/_gitignore
+curl -L -o .editorconfig https://raw.githubusercontent.com/tripteki/convention/1.0.0/_editorconfig
+curl -L -o .styleci.yml https://raw.githubusercontent.com/tripteki/convention/1.0.0/_styleci.yml
